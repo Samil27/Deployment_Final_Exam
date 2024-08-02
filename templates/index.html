@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML Task Application</title>
+    <title>ML Task App</title>
 </head>
 <body>
-    <h1>Upload CSV File</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <h1>Upload Data or Enter Manually</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
         <input type="file" name="file">
-        <input type="submit" value="Upload">
+        <input type="submit" value="Upload CSV">
     </form>
+    <form action="/" method="post">
+        <textarea name="data" rows="10" cols="30" placeholder="Enter data manually (comma-separated rows)"></textarea>
+        <input type="submit" value="Submit Data">
+    </form>
+    {% if tables %}
+        <h2>Analysis Results:</h2>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    {% endif %}
 </body>
 </html>
