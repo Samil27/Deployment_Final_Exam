@@ -1,3 +1,12 @@
-flask
-pandas
-scikit-learn
+Flask==3.0.3
+scikit-learn==1.5.1
+pandas==2.2.2
+numpy==1.23.5
+scipy==1.9.3
+joblib==1.4.2
+python-dateutil==2.9.0.post0
+pytz==2024.1
+jinja2==3.1.4
+itsdangerous==2.2.0
+click==8.1.7
+blinker==1.8.2
